@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f1f5f9;
+  margin: 0;
+  padding: 20px;
+}
+
+.chat-container {
+  max-width: 700px;
+  margin: auto;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px #0001;
+}
+
+.chat-header {
+  background: #17283f;
+  color: white;
+  padding: 20px;
+}
+
+.chat-header h2 {
+  margin: 0 0 8px;
+}
+
+.publicidad {
+  background: #e2e8f0;
+  padding: 20px;
+  margin: 15px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.usuario {
+  padding: 15px;
+}
+
+.usuario input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.mensajes {
+  height: 350px;
+  overflow-y: auto;
+  padding: 15px;
+  background: #f8fafc;
+}
+
+.mensaje {
+  background: white;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  max-width: 85%;
+  overflow-wrap: anywhere;
+}
+
+.mensaje.propio {
+  background: #dbeafe;
+  margin-left: auto;
+}
+
+.mensaje-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.mensaje-info small {
+  color: #64748b;
+}
+
+.mensaje p {
+  margin: 8px 0 0;
+}
+
+.form-chat {
+  display: flex;
+  gap: 10px;
+  padding: 15px;
+}
+
+.form-chat input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.form-chat button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  cursor: pointer;
+}
+
+.form-chat button:hover {
+  background: #1d4ed8;
+}
+.chat-header { display:flex; justify-content:space-between; align-items:center; gap:16px; }
+.chat-header h1 { font-size:24px; margin:0 0 8px; }
+.chat-header span { font-size:13px; }
+.status { color:#86efac; white-space:nowrap; }
+.publicidad h2 { margin:7px 0; font-size:20px; }
+.publicidad small { color:#64748b; letter-spacing:1px; }
+.publicidad p { margin:0; }
+.usuario label { font-weight:bold; }
+.estado { margin:0; padding:0 15px 10px; font-size:13px; color:#b91c1c; }
+@media (max-width:500px) { body {padding:10px;} .form-chat button {padding:10px;} }

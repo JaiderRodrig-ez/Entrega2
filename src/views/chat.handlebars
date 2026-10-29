@@ -1,0 +1,32 @@
+<main class="chat-container">
+  <header class="chat-header">
+    <div><h1>Chat en vivo</h1><span>Mensajes compartidos entre usuarios</span></div>
+    <span class="status">● En línea</span>
+  </header>
+
+  <section class="publicidad" aria-label="Publicidad">
+    <small>ESPACIO PUBLICITARIO</small>
+    <h2>Tu publicidad aquí</h2>
+    <p>Anuncios y promociones</p>
+  </section>
+
+  <div class="usuario">
+    <label for="nombre">Tu nombre</label>
+    <input type="text" id="nombre" placeholder="Ingresa tu nombre" maxlength="30" required>
+  </div>
+
+  <section class="mensajes" id="mensajes" aria-label="Mensajes del chat" aria-live="polite">
+    {{#each mensajes}}
+      <div class="mensaje" data-id="{{this.id}}">
+        <div class="mensaje-info"><strong>{{this.nombre}}</strong><small>{{this.hora}}</small></div>
+        <p>{{this.texto}}</p>
+      </div>
+    {{/each}}
+  </section>
+
+  <form id="formChat" class="form-chat">
+    <input type="text" id="texto" placeholder="Escribe un mensaje..." maxlength="500" required aria-label="Mensaje">
+    <button type="submit">Enviar</button>
+  </form>
+  <p id="estado" class="estado" role="status"></p>
+</main>
